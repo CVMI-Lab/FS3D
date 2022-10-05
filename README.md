@@ -1,4 +1,4 @@
-# (NeurlPS 2022) Prototypical VoteNet for Few-Shot 3D Point Cloud Object Detection  
+# Prototypical VoteNet for Few-Shot 3D Point Cloud Object Detection  
 
 ## Environments
 
@@ -16,6 +16,20 @@ pip install -e .
 ```
 
 Our implementation has been tested on one NVIDIA 3090 GPU with cuda 11.2.
+
+
+## Citation
+Please consider :grimacing: staring this repository and citing the following papers if you feel this repository useful.
+
+```
+@inproceedings{zhao2022fs3d,
+  title={Prototypical VoteNet for Few-Shot 3D Point Cloud Object Detection},
+  author={Zhao, Shizhen and Qi, Xiaojuan},
+  booktitle={Advances in Neural Information Processing Systems},
+  year={2022}
+}
+```
+
 
 ## Contact
 If you have any questions, you can email me (zhaosz@eee.hku.hk).
