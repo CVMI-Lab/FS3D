@@ -1,6 +1,6 @@
 # Prototypical VoteNet for Few-Shot 3D Point Cloud Object Detection  
 
-## The code is coming soon
+## The code is coming soon.
 
 
 ## Contact
