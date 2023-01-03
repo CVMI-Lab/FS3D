@@ -1,0 +1,12 @@
+.idea
+.DS_Store
+fs3d/.DS_Store
+.DS_Store
+configs/.DS_Store
+configs/prototypical_votenet/.DS_Store
+fs3d/.DS_Store
+fs3d/core/.DS_Store
+fs3d/models/.DS_Store
+fs3d/ops/.DS_Store
+tests/.DS_Store
+tools/.DS_Store

@@ -42,6 +42,9 @@ def parse_args():
         'useful when you want to format the result to a specific format and '
         'submit it to the test server')
     parser.add_argument(
+        '--stage',
+        default='pretraining')
+    parser.add_argument(
         '--eval',
         type=str,
         nargs='+',
@@ -169,11 +172,14 @@ def main():
 
     # build the model and load checkpoint
     cfg.model["bbox_head"]["pred_layer_cfg"]["classifier"] = args.classifier
-
     cfg.model["train_cfg"]["K_shot"] = cfg.data["train"]["dataset"]["K_shot"]
     cfg.model["train_cfg"]["N_way"] = cfg.data["train"]["dataset"]["N_way"]
+    cfg.model["train_cfg"]["support_cfg"] = cfg.support_cfg
+    cfg.model["train_cfg"]["support_anno"] = cfg.support_anno
+    cfg.model["train_cfg"]["class_names"] = cfg.class_names
+    cfg.model['train_cfg']["few_shot_class"] = cfg.few_shot_class
+    cfg.model["train_cfg"]["stage"] = "testing"
 
-    cfg.model.train_cfg = None
     model = build_model(cfg.model, test_cfg=cfg.get('test_cfg'))
     fp16_cfg = cfg.get('fp16', None)
     if fp16_cfg is not None:
